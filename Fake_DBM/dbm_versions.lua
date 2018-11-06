@@ -1,2 +1,2 @@
-dmbRevision = "18057"
+dbmRevision = "18057"
 dbmVersion = "8.0.15"

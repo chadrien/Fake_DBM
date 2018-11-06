@@ -12,7 +12,7 @@ REVISION=$(cat $tmpDir/$versionSourceFile | grep 'ReleaseRevision =' | grep -o "
 VERSION=$(cat $tmpDir/$versionSourceFile | grep 'DisplayVersion =' | grep -o "\".*\"" | sed s/\"//g)
 
 read -r -d '' TEMPLATE << EOM
-dmbRevision = "${REVISION}"
+dbmRevision = "${REVISION}"
 dbmVersion = "${VERSION}"
 EOM
 
