@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 latestVersionUrl='https://wow.curseforge.com/projects/deadly-boss-mods/files/latest'
 tmpDir=$(dirname $0)/tmp
 versionSourceFile=DBM-Core/DBM-Core.lua

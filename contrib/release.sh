@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 VERSION=$1
 
 contribDir=$(dirname $0)
