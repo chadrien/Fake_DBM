@@ -5,7 +5,7 @@ VERSION=$1
 contribDir=$(dirname $0)
 
 $contribDir/generate-toc.sh $VERSION
-$contribDir/generate-version.sh
+$contribDir/generate-dbm-versions.sh
 
 git checkout --orphan $VERSION
 git reset
