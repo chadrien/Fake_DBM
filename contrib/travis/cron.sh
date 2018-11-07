@@ -5,7 +5,7 @@ set -ex
 
 contribDir=$(dirname $(dirname $0))
 
-latestFakeDbmVersion=$(git log --tags --no-walk --pretty="%D" | grep -o "[0-9][0-9.]*" | head -1)
+latestFakeDbmVersion=$(curl -s https://api.github.com/repos/chadrien/Fake_DBM/releases/latest | jq -r .tag_name)
 
 latestDbmVersionsKnown=$(curl -s https://api.github.com/repos/chadrien/Fake_DBM/contents/dbm_versions.lua?ref=${latestFakeDbmVersion} | jq -r .content)
 $contribDir/generate-dbm-versions.sh

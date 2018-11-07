@@ -23,4 +23,7 @@ git tag "${VERSION}"
 git push -u origin HEAD
 git push --tags
 
+# create the GitHub release
+curl -u chadrien:$GITHUB_ACCESS_TOKEN -XPOST -d "{ \"tag_name\": \"$VERSION\" }" https://api.github.com/repos/chadrien/Fake_DBM/releases
+
 git checkout master
