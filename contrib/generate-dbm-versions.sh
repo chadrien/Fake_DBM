@@ -13,12 +13,12 @@ unzip $tmpDir/dbm.zip $versionSourceFile -d $tmpDir
 REVISION=$(cat $tmpDir/$versionSourceFile | grep 'ReleaseRevision =' | grep -o "[0-9][0-9]*")
 VERSION=$(cat $tmpDir/$versionSourceFile | grep 'DisplayVersion =' | grep -o "\".*\"" | sed s/\"//g)
 
-read -r -d '' TEMPLATE << EOM
+TEMPLATE=$(cat <<EOM
 dbmRevision = "${REVISION}"
 dbmVersion = "${VERSION}"
 EOM
+)
 
-echo "$TEMPLATE"
 echo "$TEMPLATE" > $(dirname $(dirname $0))/Fake_DBM/dbm_versions.lua
 
 rm -rf $tmpDir
