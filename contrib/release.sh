@@ -17,10 +17,12 @@ rm -rf contrib .gitignore
 mv Fake_DBM/* .
 rmdir Fake_DBM
 
+git remote add origin-ssh git@github.com:chadrien/Fake_DBM.git
+
 git add .
 git commit -m"${VERSION}"
 git tag "${VERSION}"
-git push -u origin HEAD
+git push -u origin-ssh HEAD
 git push --tags
 
 # create the GitHub release
