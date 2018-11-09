@@ -12,10 +12,8 @@ $contribDir/generate-dbm-versions.sh
 git checkout --orphan $VERSION
 git reset
 
-rm -rf contrib .gitignore
-
 mv Fake_DBM/* .
-rmdir Fake_DBM
+find . -maxdepth 1 -not -name '*.lua' -not -name '*.toc' -not -name '.git' -not -name '.' -exec rm -rf {} \;
 
 git remote add origin-ssh git@github.com:chadrien/Fake_DBM.git
 
