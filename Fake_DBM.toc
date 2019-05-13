@@ -1,0 +1,8 @@
+## Interface: 80000
+## Title: Fake DBM
+## Notes: Makes DBM think you have DBM installed
+## Author: chadrien
+## Version: 1.0.42
+
+dbm_versions.lua
+main.lua
